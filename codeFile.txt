@@ -1,0 +1,8 @@
+n = int(input())
+
+ret = 0
+
+for i in range(n+1):
+	ret += i
+
+print("Sum from 1 to n : {}".format(ret))
