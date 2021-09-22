@@ -26,8 +26,9 @@ SECRET_KEY = '****************************************************************'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "49.50.172.32"        
-        
+    "49.50.172.32",
+    "secret-citadel-86027.herokuapp.com",
+    ".secret-citadel-86027.herokuapp.com"
 ]
 
 # Application definition
