@@ -41,5 +41,5 @@ jobs:
         heroku_api_key: ${{ secrets.HEROKU_API_TOKEN }}
         # Heroku email address
         heroku_email_address: '010218jhlee@naver.com'
-        #
+        # CD Part
         
