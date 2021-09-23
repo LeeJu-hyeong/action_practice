@@ -1,4 +1,1 @@
-web: gunicorn pythonide.wsgi:application --log-file --log-level debug
-web: gunicore --bind 0.0.0.0:8000 pythonide:app
-python manage.py collectstatic --noinput
-manage.py migrate
+web: gunicorn secret-citadel-86027.wsgi --log-file -
