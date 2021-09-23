@@ -1,1 +1,1 @@
-web: gunicorn secret-citadel-86027.wsgi --log-file -
+web: gunicorn pythonide.wsgi --log-file -
