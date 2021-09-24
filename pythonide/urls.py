@@ -21,5 +21,6 @@ from .views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
-    path('submit/', submit, name='submit')
+    path('submit/', submit, name='submit'),
+    path('api/', apitest)
 ]

@@ -53,4 +53,5 @@ def submit(request):
     return JsonResponse({ 'result': f })
     #return render(request, "index.html", {"result": f.split("\n")})
 
-    
+def apitest(request):
+    return HttpResponse("apiTest Success!")
