@@ -22,8 +22,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '****************************************************************'
 
-import django_heroku
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -131,5 +129,4 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.settings(locals())
 
