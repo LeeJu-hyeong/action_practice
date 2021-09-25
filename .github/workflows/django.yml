@@ -18,6 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
+    # CI
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
@@ -31,15 +32,15 @@ jobs:
     - name: Run Server
       run: |
         python manage.py test
-        
-    - name: Heroku Django Deploy
-      uses: nyakaz73/heroku-django-deploy@v0.53
+
+    # CD
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
       with:
-        # Heroku app name
-        heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
-        # Heroku api key
-        heroku_api_key: ${{ secrets.HEROKU_API_TOKEN }}
-        # Heroku email address
-        heroku_email_address: '010218jhlee@naver.com'
-        # CD Part
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: |
+          ls
         
