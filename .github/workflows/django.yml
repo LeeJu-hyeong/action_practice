@@ -42,5 +42,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-          ls
+          cd action_practice
+          python3 manage.py runserver 0:8000
+          
         
