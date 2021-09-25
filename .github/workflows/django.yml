@@ -42,6 +42,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
+          sudo lsof -t -i tcp:8000 | xargs kill -9
           cd action_practice
           python3 manage.py runserver 0:8000
           
