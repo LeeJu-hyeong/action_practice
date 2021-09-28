@@ -44,7 +44,7 @@ jobs:
         script: |
           sudo lsof -t -i tcp:8000 | xargs kill -9
           cd action_practice
-          sudo nohup python3 manage.py runserver 0:8000
+          sudo nohup python3 manage.py runserver 0:8000 &
 
           
         
